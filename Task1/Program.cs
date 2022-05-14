@@ -1,5 +1,5 @@
 ﻿// Составить частотный словарь элементов двумерного массива
-/*
+
 void CreateMatr(int[,] matr)
 {
     for (int i = 0; i < matr.GetLength(0); i++)
@@ -24,40 +24,63 @@ void PrintMatr(int[,] matrix)
     }
 }
 
+void FindQuantityElements(int[,] matr)
+{
+    int a = 0;
+    int b = 0;
+    int r = 0;
+    while (r < 10)
+    {
+        for (int i = 0; i < matr.GetLength(0); i++)
+        {
+            for (int j = 0; j < matr.GetLength(1); j++)
+            {
+                if (matr[i, j] == b) a += 1;
+            }
+
+        }
+        if (a == 2 ^ a == 3 ^ a == 4) Console.WriteLine($" {b} встречается {a} раза");
+        else Console.WriteLine($" {b} встречается {a} раз");
+        a = 0;
+        r++;
+        b++;
+    }
+
+}
+
+
 int[,] newMatrix = new int[5, 5];
 
 
 CreateMatr(newMatrix);
 PrintMatr(newMatrix);
-int result = 0;
-for (int i = 0; i < newMatrix.GetLength(0); i++)
+FindQuantityElements(newMatrix);
+
+
+
+
+//================================Для одномерного массива=====================================================
+/* int[] arraynew = { 1, 0, 1, 0, 1, 2, 1, 3, 3, 0, 3, 1, 3, 5, 6, 7, 8, 9, 6, 5, 4, 6, 8, 9, 3, 4, 6, 7, 3 };
+void FindElement(int[] array)
 {
-    for (int j = 0; j < newMatrix.GetLength(1); j++)
+    int i = 0;
+    int a = 0;
+    int c = 0;
+    int j = 0;
+    while (j < array.Length)
     {
-        if (newMatrix[i, j] == 1) Console.WriteLine($"{result += 1} + кол=во");
+        while (i < array.Length)
+        {
+            if (array[i] == a) c += 1;
+            i++;
+        }
+        if (c > 1) Console.WriteLine($"{a} встречается {c} разa");
+        else Console.WriteLine($"{a} встречается {c} раз");
+        c = 0;
+        i = 0;
+        a++;
+        if (j < 9) j += 1;
+        else j = array.Length;
     }
 }
-
-*/
-
-int[] NewArray(int elements)
-{
-    int[] array = new int[elements];
-    for (int i = 0; i < array.Length; i++)
-    {
-        array[i] = new Random().Next(0, 9);
-    }
-    return array;
-}
-
-void PrintArray(int[] array)
-{
-    for (int i = 0; i < array.Length; i++)
-    {
-        Console.Write($"{array[i]}");
-    }
-}
-
-int[] array = NewArray(6);
-
-PrintArray();
+//FindElement(arraynew);*/
