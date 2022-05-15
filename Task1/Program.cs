@@ -24,11 +24,9 @@ void PrintMatr(int[,] matrix)
     }
 }
 
-void FindQuantityElements(int[,] matr)
+void DictionaryForTwoArray(int[,] matr)
 {
-    int a = 0;
-    int b = 0;
-    int r = 0;
+    int a = 0, b = 0, r = 0;
     while (r < 10)
     {
         for (int i = 0; i < matr.GetLength(0); i++)
@@ -45,16 +43,16 @@ void FindQuantityElements(int[,] matr)
         r++;
         b++;
     }
-
 }
-
+// число 10 - надо сделать его автоматическим, определяющимся из максимального значения в индексе.
+// так же не надо показывать того, чего нет, т.е если число ни разу не встретилось, то пропуск.
 
 int[,] newMatrix = new int[5, 5];
 
 
 CreateMatr(newMatrix);
 PrintMatr(newMatrix);
-FindQuantityElements(newMatrix);
+DictionaryForTwoArray(newMatrix);
 
 
 
