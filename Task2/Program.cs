@@ -1,54 +1,44 @@
 ﻿//ДЗ ЗАДАЧА 2. Найти произведение двух матриц
 
-int[,] FirstMatrix = { {2, -2, 3},
-                        {0, 2, 6},
-                        {5, 1, 0},
-                                };
+int[,] A = { {2, -2}, //[0,0] [0,1]
+                        {0, 2}, //[1,0] [1,1]
+                            };
 
 
-int[,] SecondMatrix = { {0, 2, 5},
-                        {4, -1, 7},
-                        {1, -2, 0},
-                                };
+int[,] B = { {0, 2}, //[0,0] [0,1]
+                        {4, -1},//[1,0] [1,1]
+                            };
 
-/*
-
-int h = 0;
-int result = 0;
-while (h < FirstMatrix.GetLength(0))
+C[row, col] = 0;
+for (int i = 0; i < A.GetLength(0); i++)
 {
-    for (int z = 0; z < FirstMatrix.GetLength(0); z++)
+    for (int j = 0; j < B.GetLength(1); j++)
     {
-        for (int k = 0; k < FirstMatrix.GetLength(1); k++)
-        {
-            result += (FirstMatrix.Length / FirstMatrix.Length);
-        }
+        C[,]  = A[i, 0] * B[0, j];
 
     }
-    break;
-    result = result / 3;
+
 }
-//Console.Write(result);
 
 
 
+/*
 int i = 0;
-
-
 while (i < FirstMatrix.GetLength(0))
 {
-    for (int k = 0; k < FirstMatrix.GetLength(0) / 3; k++)
+    for (int k = 0; k < FirstMatrix.GetLength(0);)
     {
         for (int j = 0; j < FirstMatrix.GetLength(1); j++)
         {
             Console.Write($" {FirstMatrix[i, j] * SecondMatrix[i, j]}");
         }
         Console.WriteLine();
+        break;
     }
     i++;
 }
-
 */
+/*
 Console.Write($"{FirstMatrix[0, 0] * SecondMatrix[0, 0] + FirstMatrix[0, 1] * SecondMatrix[1, 0] + FirstMatrix[0, 2] * SecondMatrix[2, 0]} ");
 Console.Write($"{FirstMatrix[0, 0] * SecondMatrix[0, 1] + FirstMatrix[0, 1] * SecondMatrix[1, 1] + FirstMatrix[0, 2] * SecondMatrix[2, 1]} ");
 Console.Write($"{FirstMatrix[0, 0] * SecondMatrix[0, 2] + FirstMatrix[0, 1] * SecondMatrix[1, 2] + FirstMatrix[0, 2] * SecondMatrix[2, 2]} ");
@@ -61,34 +51,40 @@ Console.Write($"{FirstMatrix[2, 0] * SecondMatrix[0, 0] + FirstMatrix[2, 1] * Se
 Console.Write($"{FirstMatrix[2, 0] * SecondMatrix[0, 1] + FirstMatrix[2, 1] * SecondMatrix[1, 1] + FirstMatrix[2, 2] * SecondMatrix[2, 1]} ");
 Console.Write($"{FirstMatrix[2, 0] * SecondMatrix[0, 2] + FirstMatrix[2, 1] * SecondMatrix[1, 2] + FirstMatrix[2, 2] * SecondMatrix[2, 2]} ");
 Console.WriteLine();
+*/
 
 
 
+int[,] ar1 ={ {2, -2},
+              {0, 2},
+                    };
+int[,] ar2 = { {0, 2},
+               {4, -1},
+                    };
 
-/*
-static int[,] mult(int[,] ar1, int[,] ar2)
+
+
+int[,] FindMultipTwoMatrix(int[,] ar1, int[,] ar2)
 {
     int[,] m = new int[ar1.GetLength(0), ar2.GetLength(1)];
 
     for (int i = 0; i < ar1.GetLength(0); ++i)
+    {
         for (int j = 0; j < ar2.GetLength(0); ++j)
+        {
             for (int k = 0; k < ar2.GetLength(1); ++k)
+            {
                 m[i, k] = m[i, k] + ar1[i, j] * ar2[j, k];
+            }
+        }
+    }
     return m;
 }
 
-static void Test1()
-{
-    int[,] ar1 ={ {2, -2, 3},
-                  {0, 2, 6},
-                  {5, 1, 0},
-                          };
-    int[,] ar2 = { {0, 2, 5},
-                    {4, -1, 7},
-                    {1, -2, 0},
-                            };
-    int[,] m = mult(ar1, ar2);
 
+int[,] m = FindMultipTwoMatrix(ar1, ar2);
+void PrintFindMultipTwoMatrix(int[,] m)
+{
     for (int i = 0; i < ar1.GetLength(0); ++i)
     {
         for (int j = 0; j < ar2.GetLength(1); ++j)
@@ -98,9 +94,4 @@ static void Test1()
         Console.WriteLine();
     }
 }
-
-
-Test1();
-
-.
-
+PrintFindMultipTwoMatrix(FindMultipTwoMatrix(ar1, ar2));

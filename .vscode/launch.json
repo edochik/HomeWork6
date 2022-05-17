@@ -9,9 +9,9 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/Task2/bin/Debug/net6.0/Task2.dll",
+            "program": "${workspaceFolder}/Task3/bin/Debug/net6.0/Task3.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/Task2",
+            "cwd": "${workspaceFolder}/Task3",
             "console": "internalConsole",
             "stopAtEntry": false
         },

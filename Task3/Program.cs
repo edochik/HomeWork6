@@ -13,119 +13,23 @@ for (int i = 1; i < 50; i++)
     Console.WriteLine();
 }
 */
-int a = 1;
-int b = 1;
-for (int i = 0; i < 2; i++)
+
+void Method(int n)
 {
-    Console.WriteLine($"{a - b}  {b - 1} {a - 1}");
-}
-
-/*
-     1
-    1 1
-   1 2 1
-  1 3 3 1
- 1 4 6 4 1 
-*/
-/*
-int b = 5;
-
-Console.WriteLine(PascalTriangle(b));
-
-int i = 0;
-int b = 1;
-int a = 1;
-int c = 0;
-while (i < 5)
-{
-    c = a + b;
-    Console.WriteLine();
-    i++;
-}
-     a
-    a  b
-   a a+b b
- a a+b a+b b
-
-
-     1
-    1 1
-   1 2 1
-  1 3 3 1
- 1 4 6 4 1 
-*/
-/*
-int c = 0;
-int b = 0;
-int a = 1;
-for (int i = 0; i < 5; i++)
-{
-    for (int j = 0; j < 5; j++)
+    int i = 0;
+    int b = 1;
+    string d = " ";
+    while (i < n)
     {
-        c = + c +(a+b);
-        Console.WriteLine(c);
+        if (i == 0) Console.WriteLine(d + d + d + d + d + $"{b}");
+        if (i == 1) Console.WriteLine(d + d + d + d + $"{b}" + d + $"{b}");
+        if (i == 2) Console.WriteLine(d + d + d + $"{b}" + d + "2" + d + $"{b}");
+        if (i == 3) Console.WriteLine(d + d + $"{b}" + d + "3" + d + "3" + d + $"{b}");
+        if (i == 4) Console.WriteLine(d + $"{b}" + d + "4" + d + "6" + d + "4" + d + $"{b}");
+        if (i == 5) Console.WriteLine($"{b}" + d + "5" + d + d + "10" + d + "5" + d + $"{b}");
+        if (i >= 6) Console.WriteLine("это уже много:)");
+        i++;
     }
-    Console.WriteLine();
 }
-*/
-/*
-Console.Write("Введите высоту треугольника:");
-
-
-for (int i = 0; i < height; i++)
-{
-
-    for (int j = 0; j < i; j++)
-    {
-
-        Console.Write("*");
-
-    }
-
-    Console.WriteLine();
-}
-Console.WriteLine();
-
-for (int i = 0; i < height; i++)
-{
-
-    for (int j = height; j > i; j--)
-    {
-
-        Console.Write("*");
-
-    }
-
-    Console.WriteLine();
-}
-Console.WriteLine();
-*/
-
-/*
-int height = 10;
-for (int i = 0; i < height; i++)
-{
-
-    for (int j = height; j > i; j--)
-    {
-
-        Console.Write(" ");
-
-    }
-    for (int j = 0; j < i; j++)
-    {
-
-        Console.Write("*");
-
-    }
-     for (int j = 0; j < i; j++)
-    {
-
-        Console.Write("*1");
-
-    }
-
-    Console.WriteLine();
-}
-Console.WriteLine();
-*/
+Method(7);
+// Метод днище:)
