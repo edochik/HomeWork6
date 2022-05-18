@@ -1,20 +1,6 @@
 ﻿//ДЗ ЗАДАЧА 3. Показать треугольник Паскаля *Сделать вывод в виде равнобедренного треугольника
 
-/*
-int PascalTriangle(int n, int k)
-{
-    if (k == 0 || n == k) return 1;
-    else return PascalTriangle(n - k, k - 1) + PascalTriangle(n - 1, k);
-
-}
-for (int i = 1; i < 50; i++)
-{
-    Console.Write($"{PascalTriangle(i, i)}");
-    Console.WriteLine();
-}
-*/
-
-void Method(int n)
+void ShowTrianglePascal(int n)
 {
     int i = 0;
     int b = 1;
@@ -31,5 +17,5 @@ void Method(int n)
         i++;
     }
 }
-Method(7);
-// Метод днище:)
+ShowTrianglePascal(7);
+// Согласен метод так себе^(
