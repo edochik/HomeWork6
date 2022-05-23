@@ -1,19 +1,6 @@
 ﻿//ДЗ ЗАДАЧА 3. Показать треугольник Паскаля *Сделать вывод в виде равнобедренного треугольника
 
 /*
-int PascalTriangle(int n, int k)
-{
-    if (k == 0 || n == k) return 1;
-    else return PascalTriangle(n - k, k - 1) + PascalTriangle(n - 1, k);
-
-}
-for (int i = 1; i < 50; i++)
-{
-    Console.Write($"{PascalTriangle(i, i)}");
-    Console.WriteLine();
-}
-*/
-
 void Method(int n)
 {
     int i = 0;
@@ -33,3 +20,62 @@ void Method(int n)
 }
 Method(7);
 // Метод днище:)
+*/
+
+
+int row = 5; //строчки для треугольника
+int[,] triangle = new int[row, row]; //Массив для треугольника
+const int cellWidth = 3;//какое кол-во символов буду использовать для вывода данного треугольника
+        
+void FillTriagle() //Метод заполняющий треугольник
+{
+    for (int i = 0; i < row; i++)//пробегает по первому столбику и заполняет единицами
+    {
+        triangle[i, 0] = 1;
+        triangle[i, i] = 1;
+    }   
+    for (int i = 2; i < row; i++)//заполняем треугольник паскаля, как и должен он быть заполнен
+    {
+        for (int j = 1; j <= i; j++)
+        {
+            triangle[i, j] = triangle[i - 1, j - 1] + triangle[i - 1, j];//формула паскаля
+        }
+    }
+}
+
+/*
+void PrintTriangle()
+{
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = 0; j < row; j++)
+        {
+            if (triangle[i, j] != 0)
+                Console.Write($"{triangle[i, j],cellWidth}");
+        }
+        Console.WriteLine();
+    }
+}
+*/
+void Magic()
+{
+    int col = cellWidth * row;
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = 0; j <= i; j++)
+        {
+            Console.SetCursorPosition(col, i + 1);
+            if (triangle[i, j] != 0) Console.Write($"{triangle[i, j],cellWidth}");
+            col += cellWidth * 2;
+        }
+        col = cellWidth * row - cellWidth * (i + 1);
+
+        Console.WriteLine();
+    }
+}
+Console.Clear();
+Console.WriteLine("clear");
+FillTriagle();
+//PrintTriangle();
+Console.WriteLine(" ");
+Magic();

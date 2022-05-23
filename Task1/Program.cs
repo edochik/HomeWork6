@@ -1,5 +1,5 @@
 ﻿// Составить частотный словарь элементов двумерного массива
-
+// Исправления вместо ^ сделал ||, так же убрал лишний инкремент
 void CreateMatrix(int[,] matrix)
 {
     for (int i = 0; i < matrix.GetLength(0); i++)
@@ -26,8 +26,8 @@ void PrintMatrix(int[,] matrix)
 
 void DictionaryForMatrix(int[,] matrix)
 {
-    int a = 0, b = 0, r = 0;
-    while (r < 10)
+    int a = 0, b = 0;
+    while (b < 10)
     {
         for (int i = 0; i < matrix.GetLength(0); i++)
         {
@@ -37,10 +37,11 @@ void DictionaryForMatrix(int[,] matrix)
             }
 
         }
-        if (a == 2 ^ a == 3 ^ a == 4) Console.WriteLine($" {b} встречается {a} раза");
+
+        if (a == 2 || a == 3 || a == 4) Console.WriteLine($" {b} встречается {a} раза");
+        // if (a == 0) Console.WriteLine(" ");
         else Console.WriteLine($" {b} встречается {a} раз");
         a = 0;
-        r++;
         b++;
     }
 }
