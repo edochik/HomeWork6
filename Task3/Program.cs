@@ -1,7 +1,11 @@
 ﻿//ДЗ ЗАДАЧА 3. Показать треугольник Паскаля *Сделать вывод в виде равнобедренного треугольника
 
+<<<<<<< HEAD
 /*
 void Method(int n)
+=======
+void ShowTrianglePascal(int n)
+>>>>>>> 4cc90aee71d3f68a468d9c8b0780b722e7d6accc
 {
     int i = 0;
     int b = 1;
@@ -18,6 +22,7 @@ void Method(int n)
         i++;
     }
 }
+<<<<<<< HEAD
 Method(7);
 // Метод днище:)
 */
@@ -79,3 +84,7 @@ FillTriagle();
 //PrintTriangle();
 Console.WriteLine(" ");
 Magic();
+=======
+ShowTrianglePascal(7);
+// Согласен метод так себе^(
+>>>>>>> 4cc90aee71d3f68a468d9c8b0780b722e7d6accc

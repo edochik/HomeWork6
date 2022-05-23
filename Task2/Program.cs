@@ -1,4 +1,4 @@
-﻿//ДЗ ЗАДАЧА 2. Найти произведение двух матриц
+//ДЗ ЗАДАЧА 2. Найти произведение двух матриц
 
 int[,] MatrixA = { {2,-2, 3},
              {0, 2 ,3},
@@ -25,6 +25,7 @@ while (i < MatrixA.GetLength(0))
     }
     i++;
 }
+<<<<<<< HEAD
 
 
 
@@ -86,3 +87,5 @@ void PrintFindMultipTwoMatrix(int[,] m)
 }
 PrintFindMultipTwoMatrix(FindMultipTwoMatrix(ar1, ar2));
 */
+=======
+>>>>>>> 4cc90aee71d3f68a468d9c8b0780b722e7d6accc
